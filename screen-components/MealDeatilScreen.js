@@ -81,17 +81,11 @@ function MealDeatilScreen({ route, navigation }) {
   const mealIsFavorite = ids.includes(mealId);
 
   function changeFavoriteStatusHandler() {
-    console.log("Icon button pressed!");
-    console.log(`Meal ID: ${mealId}`);
-    console.log(
-      `Current status: ${mealIsFavorite ? "Favorite" : "Not Favorite"}`
-    );
+  
     if (mealIsFavorite) {
       removeFavorite(mealId);
-      console.log("Removed from favorites");
     } else {
       addFavorite(mealId);
-      console.log("Added to favorites");
     }
   }
 
